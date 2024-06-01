@@ -21,6 +21,10 @@ jobs:
         distribution: 'temurin'
         cache: gradle
     - name: Grant execute permission for gradlew
+      run: chmod +x ././easycontrol/gradlew       
+    - name: Init gradle wrapper
+      run: gradle wrapper 
+    - name: Grant execute permission for gradlew
       run: chmod +x ././easycontrol/gradlew
     - name: Build with Gradle
       run: ././easycontrol/gradlew build
